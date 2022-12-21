@@ -2,7 +2,8 @@ import React, { ReactElement } from "react";
 
 export interface ProductCardProps{
     children?: ReactElement | ReactElement[]
-    product: Product
+    product: Product,
+    className?: string
 }
 
 export interface Product{
@@ -20,4 +21,14 @@ export interface ProductContextProps{
     counter: number,
     increaseBy: (value:number)=>void,
     product: Product
+}
+
+export interface ProductTitleProps{
+    title: string,
+    className?: string
+}
+
+export interface ProductImageProps{
+    img?: string,
+    className?: string
 }
