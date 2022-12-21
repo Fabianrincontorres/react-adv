@@ -3,8 +3,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink,  
 } from 'react-router-dom';
+import { LazyLoad1 } from '../01-lazyload/pages';
 
 import logo from '../logo.svg';
 import { routes } from './routes';
@@ -37,6 +38,11 @@ export const Navigation = () => {
               <route.Component/>
              </Route>
           ))}
+
+          <Route path="/*">
+            <LazyLoad1/>
+          </Route>
+
         </Switch>
       </div>
     </Router>
